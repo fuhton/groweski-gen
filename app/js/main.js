@@ -1,5 +1,5 @@
 import React from 'react'
-import GroweskiGen from './groweski'
+import ToneGen from './tone-gen'
 
 class App extends React.Component {
 	constructor () {
@@ -12,11 +12,11 @@ class App extends React.Component {
 			<input name="input" onChange={this.handleChange.bind(this)} type="text" defaultValue={this.state.tone} />
 		</div>
 		<br/>
-		<GroweskiGen value={this.state.tone} />
+		<ToneGen value={this.state.tone} />
 		</div>
 	}
 	handleChange (event) {
-		this.setState({tone: event.target.value});
+		this.setState({tone: event.target.value})
 	}
 }
 React.render(<App />, document.querySelector('#content'))

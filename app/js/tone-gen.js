@@ -1,39 +1,28 @@
 import React from 'react'
 
-class GroweskiGen extends React.Component {
+class ToneGen extends React.Component {
 	componentWillMount() {
 		this.baseRef = [
-			'c',
-			'd-',
-			'd',
-			'e-',
-			'e',
-			'f',
-			'f+',
-			'g',
-			'a-',
-			'a',
-			'b-',
-			'b'
+			'c', 'd-', 'd', 'e-', 'e', 'f', 'f+', 'g', 'a-', 'a', 'b-', 'b'
 		]
 		this.iteration = 0
 	}
 	render () {
-		var tones = this.splitTones()
-		return <div className="grow-gen">
+		this.toneRef = this.props.value.split(' ')
+		return <div className="tone-gen">
 		<table>
 		<tbody>
 			<tr>
 				<th></th>
-				{[...tones].map((x, i) =>
+				{[...this.toneRef].map((x, i) =>
 					<th key={"horz-id-" + i} scope="col">{i}</th>
 				)}
 			</tr>
-			{[...tones].map((x, i) => {
+			{[...this.toneRef].map((x, i) => {
 				this.setIteration(i)
 				return <tr key={"vert-id-" + i}>
 					<th scope="row">{i}</th>
-					{[...tones].map((y, j) =>
+					{[...this.toneRef].map((y, j) =>
 						<td key={"child-id-" + j}>{this.getTone(j)}</td>
 					)}
 				</tr>
@@ -41,11 +30,6 @@ class GroweskiGen extends React.Component {
 			</tbody>
 		</table>
 		</div>
-	}
-	splitTones () {
-		var props = this.props.value.split(' ')
-		this.toneRef = props
-		return props
 	}
 	setIteration(iteration) {
 		var iter = 0
@@ -82,4 +66,4 @@ class GroweskiGen extends React.Component {
 	}
 }
 
-module.exports = GroweskiGen
+module.exports = ToneGen
