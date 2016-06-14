@@ -1,32 +1,67 @@
+.border {
+  background: #f2f4f6;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+}
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: #88898b;
 }
 .input {
   display: flex;
   text-align: center;
-  background: #262626;
+  max-width: 350px;
+  margin: 10px auto 0;
+  background: #f2f4f6;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
 }
 .input input {
-  border: 1px solid #262626;
-  border-radius: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #f2f4f6;
   margin: 10px;
   margin: 1em;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   font-size: 15px;
   text-align: center;
+}
+.tabs {
+  display: flex;
+  margin: 20px auto 0;
+  max-width: 350px;
+  text-align: center;
+}
+.tab-container {
+  width: 33%;
+  margin: 5px 0;
+  background: #f2f4f6;
+  border: 1px solid #f2f4f6;
+  border-bottom: 1px solid #a7b4c2;
+}
+.tab-container.current {
+  background: white;
+  border: none;
+  border-top: 1px solid #a7b4c2;
+  border-right: 1px solid #a7b4c2;
+}
+.tab-container a {
+  padding: 20px;
+  display: block;
 }
 .tone-gen {
   display: flex;
   text-align: center;
 }
 .tone-gen table {
-  background: #bbaa87;
-  border: 5px solid #262626;
+  color: #6f7071;
+  background: #f2f4f6;
   border-radius: 5px;
+  border: 1px solid #dcdcdc;
   margin: 0 auto;
   padding: 40px;
 }

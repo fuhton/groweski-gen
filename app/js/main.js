@@ -1,5 +1,7 @@
 import React from 'react'
+import Tabs from './tabs'
 import ToneGen from './tone-gen'
+
 
 class App extends React.Component {
 	constructor () {
@@ -11,7 +13,7 @@ class App extends React.Component {
 		<div className="input">
 			<input name="input" onChange={this.handleChange.bind(this)} type="text" defaultValue={this.state.tone} />
 		</div>
-		<br/>
+		<Tabs />
 		<ToneGen value={this.state.tone} />
 		</div>
 	}
