@@ -1,12 +1,12 @@
 import React from 'react'
-import Tabs from './tabs'
-import ToneGen from './tone-gen'
-
+import Tones from './tones'
+import Rows  from './rows-view'
+import Tabs  from './tabs-view'
 
 class App extends React.Component {
 	constructor () {
 		super()
-		this.state = { tone: 'c d- d e- e f f+ g a- a b- b' }
+		this.state = { tone: 'c d- d e- e f g- g a- a b- b' }
 	}
 	render () {
 		return <div>
@@ -14,7 +14,7 @@ class App extends React.Component {
 			<input name="input" onChange={this.handleChange.bind(this)} type="text" defaultValue={this.state.tone} />
 		</div>
 		<Tabs />
-		<ToneGen value={this.state.tone} />
+		<Rows />
 		</div>
 	}
 	handleChange (event) {
