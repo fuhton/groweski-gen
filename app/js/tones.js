@@ -41,7 +41,6 @@ class Tones {
 		})
 		return this._modulate( x, relationship )
 	}
-
 }
 
 module.exports = new Tones
