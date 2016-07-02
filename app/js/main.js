@@ -19,8 +19,10 @@ class App extends React.Component {
 		</div>
 		<Tabs />
 		{Object.keys(this.state.toneArray).map((k, i) =>
-			<Rows key={"row-id-" + i}/>
+			<Rows tone={i} tones={this.state.toneArray} key={"row-id-" + i}/>
 		)}
+		<h1>INVERSION</h1>
+		{Tones.getRowInversion(this.state.toneArray, 0)}
 		</div>
 	}
 	handleChange (event) {
