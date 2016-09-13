@@ -1,0 +1,22 @@
+.rows {
+	margin: 20px auto 0;
+	max-width: 350px;
+	text-align: center;
+	background: #f2f4f6;
+	border-radius: 5px;
+	border: 1px solid #dcdcdc;
+	padding: .5em;
+	.row {
+		padding: .25em;
+		border-radius: 5px;
+
+		&:nth-child(odd) {
+			background: white;
+		}
+
+		span {
+			width: 25px;
+			display: inline-flex;
+		}
+	}
+}

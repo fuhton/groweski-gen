@@ -1,11 +1,12 @@
-import React from 'react'
-import Tones from './tones'
-import Rows  from './rows-view'
-import Tabs  from './tabs-view'
+import React    from 'react'
+import ToneBase from './tones/primary'
+import Rows     from './rows-view'
+import Tabs     from './tabs-view'
 
 class App extends React.Component {
 	constructor () {
 		var tone = 'c d- d e- e f g- g a- a b- b'
+		tone = 'g e- f b- d- a d g- e c a- b'
 		super()
 		this.state = {
 			tone: tone,
@@ -14,15 +15,15 @@ class App extends React.Component {
 	}
 	render () {
 		return <div>
-		<div className="input">
-			<input name="input" onChange={this.handleChange.bind(this)} type="text" defaultValue={this.state.tone} />
-		</div>
-		<Tabs />
-		{Object.keys(this.state.toneArray).map((k, i) =>
-			<Rows tone={i} tones={this.state.toneArray} key={"row-id-" + i}/>
-		)}
-		<h1>INVERSION</h1>
-		{Tones.getRowInversion(this.state.toneArray, 0)}
+			<div className="input">
+				<input name="input" onChange={this.handleChange.bind(this)} type="text" defaultValue={this.state.tone} />
+			</div>
+			<Tabs/>
+			<div className="rows">
+				{Object.keys(this.state.toneArray).map((k, i) =>
+					<Rows tone={i} tones={this.state.toneArray} key={"row-id-" + i}/>
+				)}
+			</div>
 		</div>
 	}
 	handleChange (event) {

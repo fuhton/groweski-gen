@@ -1,16 +1,10 @@
 import React from 'react'
-import Tones from './tones'
+import Tones from './tones/primary'
 
 class Rows extends React.Component {
-	componentWillMount() {
-	}
+
 	render () {
-		return <div className="rows">
-			{this.outputResult()}
-		</div>
-	}
-	outputResult () {
-		var result = Tones.getRow( this.props.tones, this.props.tone );
+		var result = Tones.transformRow( this.props.tone, this.props.tones );
 		return <div className="row">
 			{[...result].map((y, j) =>
 				<span key={"child-id-" + j}>{y}</span>

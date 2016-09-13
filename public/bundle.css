@@ -53,15 +53,23 @@ body {
   padding: 20px;
   display: block;
 }
-.tone-gen {
-  display: flex;
+.rows {
+  margin: 20px auto 0;
+  max-width: 350px;
   text-align: center;
-}
-.tone-gen table {
-  color: #6f7071;
   background: #f2f4f6;
   border-radius: 5px;
   border: 1px solid #dcdcdc;
-  margin: 0 auto;
-  padding: 40px;
+  padding: .5em;
+}
+.rows .row {
+  padding: .25em;
+  border-radius: 5px;
+}
+.rows .row:nth-child(odd) {
+  background: white;
+}
+.rows .row span {
+  width: 25px;
+  display: inline-flex;
 }
