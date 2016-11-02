@@ -60,14 +60,17 @@ body {
   background: #f2f4f6;
   border-radius: 5px;
   border: 1px solid #dcdcdc;
-  padding: .5em;
+  padding: 1em .5em;
+}
+.rows .edit {
+  font-size: 8px;
+}
+.rows .rowInput {
+  display: inline;
 }
 .rows .row {
   padding: .25em;
   border-radius: 5px;
-}
-.rows .row:nth-child(odd) {
-  background: white;
 }
 .rows .row span {
   width: 25px;

@@ -20,6 +20,7 @@ class Tabs extends React.Component {
 		</div>
 	}
 	handleClick(event) {
+		console.log( event );
 		// HANDLE THE CLICK
 	}
 

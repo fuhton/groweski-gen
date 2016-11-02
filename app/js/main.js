@@ -18,7 +18,6 @@ class App extends React.Component {
 			<div className="input">
 				<input name="input" onChange={this.handleChange.bind(this)} type="text" defaultValue={this.state.tone} />
 			</div>
-			<Tabs/>
 			<div className="rows">
 				{Object.keys(this.state.toneArray).map((k, i) =>
 					<Rows tone={i} tones={this.state.toneArray} key={"row-id-" + i}/>
